@@ -15,6 +15,7 @@ test("Simple Form Demo", async ({ page, baseURL }) => {
 
     const messageDisplayed = page.locator('#message');
 
+    await expect(messageDisplayed).toBeVisible();
     await expect(messageDisplayed).toHaveText(inputMessage);
 
     console.log("Successfully validated the message displayed on the page.");
